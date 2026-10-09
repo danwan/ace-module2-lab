@@ -226,3 +226,21 @@ AI agents are productivity tools for enhancing development. You (or the person r
 ---
 
 **Last Updated**: April 2026
+
+<!-- house-rules -->
+## House rules
+
+- **W1** A bug fix starts with a test that reproduces it and fails. A feature names
+  the one observable check that proves it works.
+- **W2** Documentation states the present state only: no changelogs, no dated
+  entries, no "formerly" / "no longer" wording. When something changes, rewrite the
+  sentence and delete what it replaced.
+- **E4** `main` deploys to production; never commit directly to `main`. Every other
+  branch is preview.
+- PRs open as draft, flip to ready exactly once, and merge only after the review
+  has arrived.
+- Before any merge, ahead/behind or `[gone]` claim, run `git fetch` and judge it by
+  its exit code; keychain write-back noise printed with exit 0 is not a failure.
+- Apply stack-specific rules only when the stack is detected in the repo; otherwise
+  state "N/A — project has no X".
+<!-- /house-rules -->
