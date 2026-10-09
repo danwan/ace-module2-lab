@@ -83,3 +83,12 @@ cm-security-report.json
 .codemender/
 *.cm.log
 .cm_project
+.claude/*
+!.claude/rules/
+!.claude/agents/
+!.claude/settings.json
+!.claude/skills/
+.claude/settings.local.json
+.claude/agent-memory*/
+.claude/worktrees/
+.claude/*.lock
